@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<style type="text/css">
+		html,body {
+			margin:0px;
+			height:100%;
+		}
+		</style>
+		<script src="http://www.wiris.net/demo/editor/editor"></script>
+	</head>
+	<body>
+		<div style="height:100%;width:100%" id="editorContainer"></div>
+		<script type="text/javaScript">
+			editor = com.wiris.jsEditor.JsEditor.newInstance({
+						'toolbar':'<toolbar ref="quizzes"/>'
+					});
+			editor.insertInto(document.getElementById('editorContainer'));
+			editor.setMathML("<math><mi>x</mi></math>");
+		</script>
+	</body>
+</html>

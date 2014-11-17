@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -27,6 +27,7 @@
         <![endif]-->
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/angular.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -84,36 +85,52 @@
                 <li><a href="">Another nav item</a></li>
               </ul>
             </div>
+            <!-- main -->
             <div class="col-sm-6 col-sm-offset-3 col-md-7 col-md-offset-2 main">
               <h1 class="page-header">Dashboard</h1>
-              
-
+              <!-- panel group main -->
               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <!-- aptitud academica -->
                 <div class="panel panel-primary">
                   <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Collapsible Group Item #1
+                        Aptitud Académica
                       </a>
                     </h4>
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-
+                    <!-- panel group secondary -->
                       <div class="panel-group" id="aptitud_academica" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-primary">
                           <div class="panel-heading" role="tab" id="headingOneOne">
                             <h4 class="panel-title">
                               <a data-toggle="collapse" data-parent="#aptitud_academica" href="#collapseOneOne" aria-expanded="true" aria-controls="collapseOneOne">
-                                Collapsible Group Item #1
+                                Razonamiento Verbal
                               </a>
                             </h4>
                           </div>
                           <div id="collapseOneOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneOne">
                             <div class="panel-body">
-
-                              
-
+                            <div class="pregunta">
+                                <div>
+                                    1. pregunta
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <input type="radio" name="opcion" value="opcion">Opcion 1
+                                    <br>
+                                    <input type="radio" name="opcion" value="opcion">Opcion 2
+                                    <br>
+                                    <input type="radio" name="opcion" value="opcion">Opcion 3
+                                    <br>
+                                    <input type="radio" name="opcion" value="opcion">Opcion 4
+                                    <br>
+                                    <input type="radio" name="opcion" value="opcion">Opcion 5
+                                  </div>
+                                </div>
+                            </div>
                             </div>
                           </div>
                         </div>
@@ -121,13 +138,13 @@
                           <div class="panel-heading" role="tab" id="headingTwoTwo">
                             <h4 class="panel-title">
                               <a class="collapsed" data-toggle="collapse" data-parent="#aptitud_academica" href="#collapseTwoTwo" aria-expanded="false" aria-controls="collapseTwoTwo">
-                                Collapsible Group Item #2
+                                Razonamiento Matemático
                               </a>
                             </h4>
                           </div>
                           <div id="collapseTwoTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwoTwo">
                             <div class="panel-body">
-                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                              contenido
                             </div>
                           </div>
                         </div>
@@ -136,11 +153,12 @@
                     </div>
                   </div>
                 </div>
+                <!-- conocimientos -->
                 <div class="panel panel-primary">
                   <div class="panel-heading" role="tab" id="headingTwo">
                     <h4 class="panel-title">
                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Collapsible Group Item #2
+                        Conocimientos
                       </a>
                     </h4>
                   </div>
@@ -152,10 +170,15 @@
                 </div>
               </div>
 
-            </div>
-          
-          <div class="col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-2 ">
-          </div>  
+            </div>          
+            <div class="col-sm-3 col-md-3 ">
+              <div>
+                  <label>Name:</label>
+                  <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                  <hr>
+                  <p>Hello {{yourName}}!</p>
+              </div>
+            </div>  
           </div>
         </div>
         
