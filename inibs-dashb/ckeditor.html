@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+    <form>
+            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                This is my textarea to be replaced with CKEditor.
+            </textarea>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.editorConfig = function( config ) {
+    
+    config.uiColor = '#AADC6E';
+                    config.extraPlugins = 'widget';
+                config.extraPlugins = 'lineutils';
+                config.extraPlugins = 'mathjax';
+                config.extraPlugins = 'mathedit';
+                    
+};
+                
+                CKEDITOR.replace( 'editor1' );
+            </script>
+        </form>
+
+</body>
+</html>
